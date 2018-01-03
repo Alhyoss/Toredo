@@ -1,1 +1,4 @@
 .ve
+*.sqlite3
+.idea
+Toredo/__pycache__/

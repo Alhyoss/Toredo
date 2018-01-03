@@ -1,0 +1,11 @@
+article {
+    flex: 2;
+    padding-right: 20px;
+    text-align: justify;
+    border-right: solid 1px #494951
+}
+
+aside {
+    flex: 1;
+    padding-left: 20px;
+}

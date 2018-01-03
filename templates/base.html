@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr" xml:lang="fr">
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="shortcut icon" href="{% static 'img/logo-small.png' %}" />
+    {% block links %}
+    {% endblock %}
+    <title>Toredo - Petites annonces</title>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            {% block header %}
+            <h1 id="logo">
+                {%  block logo %}
+                <a href="homepage.html">
+                    <img src="{% static 'img/logo.png' %}" alt="Toredo" width="150"/>
+                    <p><span>Site </span> d'eCommerce</p>
+                </a>
+                {% endblock %}
+            </h1>
+            <nav id="primary-nav">
+                {% block nav %}
+                <ul>
+                    <li class="primary-nav-item">
+                        <a href="#">Acceuil</a>
+                    </li>
+                    <li class="primary-nav-item">
+                        <a href="#">Annonces</a>
+                    </li>
+                    <li class="primary-nav-item">
+                        <a href="#">Publier</a>
+                    </li>
+                    <li class="primary-nav-item">
+                        <a href="#">Contact</a>
+                    </li>
+                    <li class="primary-nav-item">
+                        <a href="#">A propos</a>
+                    </li>
+                </ul>
+                {% endblock %}
+            </nav>
+            {% endblock %}
+        </header>
+        
+        <section class="content">
+            {% block content %}
+            {% endblock %}
+        </section>
+    </div>
+
+    <footer>
+        {% block footer %}
+        <div class="blueline">
+        </div>
+        <div id="copyright">
+            <a href="homepage.html">Toredo - Site de petites annonces</a>
+            Copyrigth 2018
+        </div>
+        {% endblock %}
+    </footer>
+</body>
+</html>

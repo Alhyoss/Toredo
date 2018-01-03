@@ -1,0 +1,154 @@
+/***************** Colors ***********************/
+:root {
+    --myblue: #00bbff;
+    --mydarkgrey: #494951;
+    --mylightgray: rgb(146, 146, 146);
+}
+
+@font-face {
+    font-family: 'Titillium';
+    src: url('../font/titillium-semibold.eot');
+    src: url('../font/titillium-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../font/titillium-semibold.woff2') format('woff2'),
+         url('../font/titillium-semibold.woff') format('woff'),
+         url('../font/titillium-semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    /*border-style: solid;*/
+    border-width: 1px;
+    margin: 0px; 
+    padding: 0px;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+    width: 1000px;
+    margin: auto;
+}
+
+header {
+    font-family: 'Titillium', Arial, Helvetica, sans-serif;
+}
+
+/********************* LOGO ********************/
+h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 p {
+    font-size: 17px;
+    margin-top: -30px;
+    margin-left: 40px;
+    font-weight: normal;
+}
+
+h1 p span {
+    color: var(--myblue);
+}
+
+/********************* NAVIGATION ********************/
+#primary-nav {
+    width: 100%;
+    background-color: var(--mydarkgrey);
+    border: solid 1px var(--mylightgray);
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+#primary-nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.primary-nav-item {
+    flex: 1;
+    text-transform: uppercase;
+    text-align: center;
+    border-left: solid 1px black;
+}
+
+#primary-nav ul > :first-child{
+    border-left: none;
+}
+
+#primary-nav ul > :first-child:hover{
+    border-radius: 5px 0px 0px 5px;
+}
+
+#primary-nav ul > :last-child:hover{
+    border-radius: 0px 5px 5px 0px;
+}
+
+.primary-nav-item a:hover {
+    /* background-color: var(--myblue); */
+    color: var(--myblue);
+}
+
+.primary-nav-item a{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+/************************* Content **********************/
+.content {
+    background-color: white;
+    border: solid 1px #a1a1a1;
+    padding: 20px;
+    padding-top: 10px;
+    border-radius: 8px;
+    margin-bottom: 85px;
+    display: flex;
+
+}
+
+/********************* Footer **********************/
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: var(--mydarkgrey);
+    padding-bottom: 10px;
+    color: var(--mylightgray);
+    font-size: 15px;
+}
+
+.blueline {
+    height: 10px;
+    background-color: var(--myblue);
+    margin-bottom: 10px;
+}
+
+#copyright {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--myblue);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
