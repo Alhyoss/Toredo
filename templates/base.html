@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr" xml:lang="fr">
 <head>
-    {% load staticfiles %}
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    <link rel="shortcut icon" href="{% static 'img/logo-small.png' %}" />
+    <link rel="stylesheet" href="static/css/base.css" />
+    <link rel="shortcut icon" href="static/img/small-logo.png" />
     {% block links %}
     {% endblock %}
     <title>Toredo - Petites annonces</title>
@@ -17,7 +16,7 @@
             <h1 id="logo">
                 {%  block logo %}
                 <a href="homepage.html">
-                    <img src="{% static 'img/logo.png' %}" alt="Toredo" width="150"/>
+                    <img src="static/img/logo.png" alt="Toredo" width="150"/>
                     <p><span>Site </span> d'eCommerce</p>
                 </a>
                 {% endblock %}
