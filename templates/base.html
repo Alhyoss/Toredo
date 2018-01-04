@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr" xml:lang="fr">
 <head>
+    {% load staticfiles %}
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="static/css/base.css" />
-    <link rel="shortcut icon" href="static/img/small-logo.png" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="shortcut icon" href="{% static 'img/small-logo.png' %}" />
     {% block links %}
     {% endblock %}
     <title>Toredo - Petites annonces</title>
@@ -15,8 +16,8 @@
             {% block header %}
             <h1 id="logo">
                 {%  block logo %}
-                <a href="homepage.html">
-                    <img src="static/img/logo.png" alt="Toredo" width="150"/>
+                <a href="{% url "home" %}">
+                    <img src="{% static 'img/logo.png' %}" alt="Toredo" width="150"/>
                     <p><span>Site </span> d'eCommerce</p>
                 </a>
                 {% endblock %}
@@ -56,7 +57,7 @@
         <div class="blueline">
         </div>
         <div id="copyright">
-            <a href="homepage.html">Toredo - Site de petites annonces</a>
+            <a href="{% url "home" %}">Toredo - Site de petites annonces</a>
             Copyrigth 2018
         </div>
         {% endblock %}
